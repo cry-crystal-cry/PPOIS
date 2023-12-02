@@ -6,17 +6,17 @@
 #include "Patient.h"
 
 using namespace std;
-class Nurse :
+class MedicalWorker :
 	public Worker
 {
 protected:
 	vector<Patient*> listOfPatients;
 public:
-	Nurse();
-	Nurse(const IdCard& idCard, const int& lifeStatus_, const double& salary_);
-	Nurse(const string& name_, const string& surname_, const string& lastName_, const string& uniqueSignature_, const string& gender_,
+	MedicalWorker();
+	MedicalWorker(const IdCard& idCard, const int& lifeStatus_, const double& salary_);
+	MedicalWorker(const string& name_, const string& surname_, const string& lastName_, const string& uniqueSignature_, const string& gender_,
 		const int& age_, const string& country_, const string& familyStatus_, const string& identificalNumber_, const int& lifeStatus_, const double& salary_);
-	~Nurse();
+	~MedicalWorker();
 	void addPatient(Patient*);
 	void removePatient(Patient*);
 	void writeToMedicalCard(Patient*, const string&) const;

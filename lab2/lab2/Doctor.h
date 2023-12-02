@@ -1,9 +1,9 @@
 #pragma once
-#include "Nurse.h"
+#include "MedicalWorker.h"
 #include "Recipe.h"
 
 class Doctor :
-    public Nurse
+    public MedicalWorker
 {
 public:
     Doctor();
@@ -12,7 +12,7 @@ public:
         const int& age_, const string& country_, const string& familyStatus_, const string& identificalNumber_, const double& salary_, const int& lifeStatus_);
     ~Doctor();
     void backToLife(Patient*) const;
-    void carryOutOperation(Patient*, Nurse*) const;
+    void carryOutOperation(Patient*, MedicalWorker*) const;
     void givePrescription(Patient* patient_, const string& medicineName_, const Date& dateFrom_, const Date& dateTo_) const;
 };
 
