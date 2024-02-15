@@ -1,0 +1,32 @@
+lib_component_ui_menu_graph_agent = [*
+ui_menu_graph_agent <- ui_user_command_class_atom; ui_user_command_class_view_kb;
+ui_one_argument_command_class;;
+
+ui_menu_graph_agent
+=> nrel_main_idtf:
+	[Графовый агент]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[Запрос на поиск диаметра]
+	(* <- lang_ru;; *);;
+	
+ui_menu_graph_agent
+=> nrel_main_idtf:
+	[?]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Request for search diameter]
+	(* <- lang_en;; *);;
+	
+ui_menu_graph_agent => ui_nrel_command_template:
+	[*
+		question_find_diameter _-> ._question_find_diameter
+		(*
+				_-> ui_arg_1;;
+		*);;
+		._question_find_diameter _<- question;;
+	*];;
+ui_menu_graph_agent => ui_nrel_command_lang_template: [Какой диаметр у графа?] (* <- lang_ru;; *);;
+ui_menu_graph_agent => ui_nrel_command_lang_template: [What is the diameter of the graph?] (* <- lang_en;; *);;
+*];;
+

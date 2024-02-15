@@ -1,0 +1,8 @@
+lib_component_ui_menu_graph_agent
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса для нахождения диаметра графа.]
+	(* <- lang_ru;; *);
+	[Library component. User interfaces command of finding the diameter of the graph.]
+	(* <- lang_en;; *);
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;;
